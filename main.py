@@ -9,7 +9,8 @@ from io import BytesIO
 
 # --- Configuration ---
 # Set your API Key here
-API_KEY = "" 
+
+API_KEY = os.getenv("API_KEY")
 client = genai.Client(api_key=API_KEY)
 
 app = Flask(__name__)
